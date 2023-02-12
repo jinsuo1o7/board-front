@@ -1,0 +1,17 @@
+{
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "window.zoomLevel": 1,
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "Dracula",
+    "eslint.enable": true,
+    "eslint.validate": ["javascript", "javascriptreact"],
+    "javascript.format.enable": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.tabWidth": 2,
+    "editor.tabCompletion": "on",
+    "editor.indentSize": "tabSize",
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": false,
+    "editor.tabSize": 2
+}

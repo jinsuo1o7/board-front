@@ -16,7 +16,9 @@ export default function ViewUser() {
   }, []);
 
   const loadUser = async () => {
-    const result = await axios.get(`/api/members/${id}`);
+    const result = await axios.get(`/api/members/${id}`, {
+      headers: { Authorization: localStorage.getItem("token") },
+    });
     setUser(result.data);
   };
 

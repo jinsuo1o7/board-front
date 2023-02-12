@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function AddUser() {
+export default function JoinUser() {
   let navigate = useNavigate();
 
   const [user, setUser] = useState({
@@ -25,19 +25,25 @@ export default function AddUser() {
   };
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-center m-4">Register User</h2>
+    <div>
+      <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div>
+          <h2 className="mb-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+            Join the membership
+          </h2>
 
           <form onSubmit={(e) => onSubmitListener(e)}>
             <div className="mb-3">
-              <label htmlFor="Name" className="form-label">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Name
               </label>
               <input
+                id="name"
                 type={"text"}
-                className="form-control input-join-name"
+                className="block w-full rounded-md border-gray-300 pl-4 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 placeholder="Enter your name"
                 name="name"
                 value={name}
@@ -46,12 +52,15 @@ export default function AddUser() {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="UserName" className="form-label">
+              <label
+                htmlFor="UserName"
+                className="block text-sm font-medium text-gray-700"
+              >
                 UserName
               </label>
               <input
                 type={"text"}
-                className="form-control"
+                className="block w-full rounded-md border-gray-300 pl-4 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 placeholder="Enter your username"
                 name="userName"
                 value={userName}
@@ -60,12 +69,15 @@ export default function AddUser() {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="Email" className="form-label">
+              <label
+                htmlFor="Email"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Email
               </label>
               <input
                 type={"text"}
-                className="form-control"
+                className="block w-full rounded-md border-gray-300 pl-4 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 placeholder="Enter your email"
                 name="email"
                 value={email}
@@ -74,12 +86,15 @@ export default function AddUser() {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="Password" className="form-label">
+              <label
+                htmlFor="Password"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Password
               </label>
               <input
                 type={"password"}
-                className="form-control"
+                className="block w-full rounded-md border-gray-300 pl-4 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 placeholder="Enter your password"
                 name="password"
                 value={password}
@@ -87,10 +102,16 @@ export default function AddUser() {
               />
             </div>
 
-            <button type="submit" className="btn btn-outline-primary">
+            <button
+              type="submit"
+              className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 mb-1"
+            >
               Submit
             </button>
-            <Link className="btn btn-outline-danger mx-2" to="/">
+            <Link
+              className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-300 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              to="/"
+            >
               Cancel
             </Link>
           </form>
